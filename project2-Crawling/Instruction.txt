@@ -1,0 +1,21 @@
+General specifications:
+This assignment may be done individually or in groups of 2-4. For each size group, the expectations are the same; solo workers save time by not having to talk to anyone while group workers can split the work with the addition of communications costs. All group members receive the same score (except possibly as modified by the TA in the interview phase; see below).
+You may use text processing code that you or any classmate wrote for the previous assignment. You may not use crawler code written by non-group-member classmates. Use code found over the Internet at your own peril—it may not do exactly what the assignment requires. If you do end up using code you find on the Internet, you must disclose the origin of the code. As stated in the collaboration guidelines, concealing the origin of a piece of code is plagiarism.
+Use Piazza for general questions whose answers can benefit everybody.
+You may use Java, Python, or Scheme/Racket for this assignment. As before, Java is the safest choice because the assignment is written with Java in mind and the skeleton is in Java. This time there are some resources provided in Python; you'd still have to translate the skeleton. The Python resources, being newer, may be less robust (meaning you should allow extra time in case of snags). But there may be extra credit for identifying and documenting specific bugs in the Python resources.
+Your task is to fill in the one method in the skeleton according to its specification. You may create additional methods and classes where necessary, provided the interface is the same.
+
+More specific specifications:
+(Very important for getting credit) Set the name of your crawler's User Agent to this precise string: UCI Inf141-CS121 crawler StudentID(s), where the last part is the eight-digit student ID of each team member, separated by one space.
+Start with the seed http://www.ics.uci.edu and crawl from there. Crawl only the domain ics.uci.edu and all of its subdomains (anything.ics.uci.edu).
+(Very important for politeness) Wait at least 600ms between page requests to the same subdomain. You need to set this in the crawler configuration.
+(Very important for the next phase) Have a mechanism to store the content of crawled links to a text file or a database as per your preference. (Hint: So your A.html web page will have some content in the page enclosed in tags such as <body>, <title> etc. You take this content and store it in a text file or a database. You would need to map each URL to some ID. You can name the text file or the database row using this ID. You have a lot of flexibility about doing this part. You would be using these files to build your indexes for search engine so think ahead.)
+We will verify execution by checking the server logs of some pages in the domain. These servers are in any correctly-written crawler path. If we don't find log entries for your student ID, that means that your crawler didn't perform correctly or you didn't set its name correctly. If we can't verify that your crawler did run successfully, we will assume that it didn't.
+At points, this assignment may be underspecified (i.e., not fully describe what to do in every situation). In those cases, post your questions on Piazza or check with the TA. For minor issues, make your own assumptions and document them.
+
+Questions:
+How much time did it take to crawl the entire domain?
+How many unique pages did you find in the entire domain? (Uniqueness is established by the URL, not the page's content.)
+How many subdomains did you find? Submit the list of subdomains ordered alphabetically and the number of unique pages detected in each subdomain. The file should be called Subdomains.txt, and its content should be lines containing the URL, a comma, a space, and the number.
+What is the longest page in terms of number of words? (Don't count HTML markup as words.)
+What are the 500 most common words in this domain? (Ignore English stop words, which can be found, for example, at http://www.ranks.nl/stopwords.) Submit the list of common words ordered by frequency (and alphabetically for words with the same frequency) in a file called CommonWords.txt.
