@@ -1,0 +1,24 @@
+DEVELOPER VERSION
+
+Goal: Implement a complete search engine for the ICS domain. 
+At the end of this project, you should have a interface that provides the user with a text box to enter queries and returns relevant results.
+
+Milestone # 1. Implement indexer and build an Index
+Using the pages that you stored by crawling the ics.uci.edu domain in the previous project OR provided HTML file collection, construct an index that maps words to documents (pages). As pay load you should add at least the TF-IDF. Note that this will be the first draft of your index. You may need to redesign it as you improve your search engine. You may choose to store your index in any format you want to but please make sure you are able to demonstrate through examples what does your index structure look like.
+NOTE: You are being asked to build your own index. Start by writing a basic indexer code (from scratch) that takes as a parameter the location of the files and produces basic index as output. Start small: get your indexer to work with a small set of small simple files. Make sure it generates expected outcome. Only then apply it to the large dataset!
+NOTE: While the use of the powerful Lucene library would be recommended for a real search engine, in using it you will miss most of the valuable lessons that this class can teach you. So: no Lucene! 
+
+Milestone #2. Implement Search Engine on top of your Index
+Develop an interface to search your index that retrieves documents according to a relevance score. You are the one in charge of designing your relevance score, although for this milestone this is not very important. Your search engine should work like what’s expected of search engines: the user types a query and a list of relevant hits is shown, showing at least the URL. Bonus points will be given for also showing relevant text snippets in the hits. The UI doesn’t need to be a Web UI at this point, although you may want to do that at some point, because it’s nicer (and you can show it off to others on the Internet). At least the following queries should be used to test your search engine: 
+1 - mondego 
+2- machine learning 
+3- software engineering 
+4 - security 
+5 - student affairs 
+6 - graduate courses 
+7- informatics
+8 - REST 
+9 - computer games 
+10 - information retrieval (Feel free to use more) 
+
+M3(optional). Extra credit: Give your search engine a Web UI
